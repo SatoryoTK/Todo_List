@@ -25,20 +25,10 @@ class TodoController extends Controller
     public function update(Request $request)
     {
         $param = [
-            'content' => $request->todo_content,
+            'content' => $request->content,
             'updated_at' => Carbon::now(),
         ];
         DB::table('todo_contents')->where('id', $request->id)->update($param);
-        return redirect('/');
-    }
-    public function delete(Request $request)
-    {
-        $param = [
-            'content' => $request->todo_content,
-            'updated_at' => Carbon::now(),
-        ];
-        DB::table('todo_contents')->insert($param);
-        $items = DB::select('select * from todo_contents');
         return redirect('/');
     }
 }
