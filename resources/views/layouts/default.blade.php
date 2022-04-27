@@ -89,12 +89,12 @@
   <div class="main_contents">
     <h1>Todo List</h1>
     <form action='/add' method='post' class="register" name="add">
+    @csrf
       <input type='text' name="add" style="width:85%;height:30px;" class="addition_content">
       <button class="addition_button">追加</button>
     </form>
     <div class="todo_table">
       <table>
-      @csrf
       <tr class="ttl">
         <th>作成日</th>
         <th>タスク名</th>

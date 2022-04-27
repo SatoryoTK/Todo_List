@@ -5,7 +5,8 @@
     <td>
       {{$item->created_at}}
     </td>
-    <form action="/update" method="get">
+    <form action="/update" method="post">
+      @csrf
       <td>
         <input type='text' name="todo_content" style="width:85%;height:20px;" value="{{$item->content}}">
       </td>

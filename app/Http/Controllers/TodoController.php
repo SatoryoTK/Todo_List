@@ -14,7 +14,7 @@ class TodoController extends Controller
     }
     public function add()
     {
-        return redirect('add');
+        return redirect('todo');
     }
     public function create(Request $request)
     {
