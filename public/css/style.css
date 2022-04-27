@@ -1,0 +1,89 @@
+<link rel="stylesheet"href="{{ asset('css/style.css') }}">
+
+h1{
+  margin-left: 4%;
+}
+.background{
+  background-color:blueviolet;
+  position: relative;
+  height: 100vh;
+  margin: -10px -10px ;
+}
+.main_contents{
+  position: absolute;
+  top: 32%;
+  left:20%;
+  background-color: white;
+  border-radius: 10px;
+  width: 60%;
+  padding:0 10px 25px;
+}
+.register{
+  text-align: center;
+  margin-bottom: 0px;
+}
+.addition_button{
+  display: inline-block;
+  border-radius: 10%;
+  border-color: rgb(137, 137, 254);
+  font-size:15px;
+  color: rgb(137, 137, 254);
+  padding:5px 15px;
+  margin-left: 10px;
+  background-color: white;
+}
+.addition_button:hover{
+  color:white;
+  background-color: rgb(137, 137, 254);
+  transition: 1s;
+}
+th{
+  table-layout:fixed;
+  width: 400px;
+  height: 60px;
+}
+td{
+  table-layout:fixed;
+  width: 400px;
+  text-align: center;
+}
+.update_button{
+  display: inline-block;
+  border-radius: 10%;
+  border-color: rgb(204, 177, 0);
+  font-size: 15px;
+  color: rgb(204, 177, 0);
+  padding: 5px 15px;
+  margin-left: 10px;
+  background-color: white;
+}
+.update_button:hover {
+  color: white;
+  background-color: rgb(204,
+  177,
+  0);
+  transition: 1s;
+}
+.delete_button {
+  display: inline-block;
+  border-radius: 10%;
+  border-color: rgb(190, 188, 188);
+  font-size: 15px;
+  color: rgb(190, 188, 188);
+  padding: 5px 15px;
+  margin-left: 10px;
+  background-color: white;
+}
+.delete_button:hover {
+  color: white;
+  background-color: rgb(190,
+  188,
+  188);
+  transition: 1s;
+}
+
+
+<tr><td><?php $today=date("Y-m-d H:i:s");
+
+print_r($today);
+?></td><form action="/update"method="get"><td><input type='text'name="todo_content"style="width:85%;height:20px;"></td><td><input type="submit"value="更新"class="update_button"></td><td><input type="submit"value="削除"class="delete_button"formaction="/delete"></td></form></tr>
