@@ -88,9 +88,9 @@
   <div class="background"></div>
   <div class="main_contents">
     <h1>Todo List</h1>
-    <form action='/create' method='post' class="register" name="add">
+    <form action='/todo/create' method='post' class="register" name="add">
     @csrf
-      <input type='text' name="add" style="width:85%;height:30px;" class="addition_content">
+      <input type='text' name="add" style="width:85%;height:30px;" class="addition_content" required minlength='1' maxlength='20'>
       <button type='submit' class="addition_button">追加</button>
     </form>
     <div class="todo_table">
